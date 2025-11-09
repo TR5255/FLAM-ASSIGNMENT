@@ -122,16 +122,3 @@ A plot was generated comparing the original data points (in blue) and the fitted
 
 ---
 
-### Summary of Key Outputs
-
-* **Optimized Parameters:** θ = 29.9994°, M = 0.0300, X = 54.9985  
-* **Mean L1 Distance:** 0.013  
-* **Output File:** `fitted_values.csv`  
-* **Visualization:** Displays a plot of fitted curve vs. data points  
-
-These results confirm that the two-stage fitting approach — global parameter optimization followed by per-point t-refinement — effectively models the dataset with high precision.
-
----
-
-
----

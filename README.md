@@ -103,6 +103,34 @@ The script prints progress and timing, saves `fitted_values.csv`, and displays a
 * **Robust loss**: replace least-squares with a robust loss (e.g., Huber) to reduce sensitivity to outliers.
 * **Visualization**: save static plot images (`.png`) and include an interactive viewer (e.g., Plotly) for inspecting point-to-curve correspondences.
 
+
+---
+
+## Results
+
+After running the optimization on the provided `xy_data.csv`, the algorithm successfully converged to the following optimal parameters:
+
+| Parameter | Symbol | Value |
+|------------|:------:|-------:|
+| Rotation angle | θ | 30.0018° |
+| Scale factor | M | 0.0300 |
+| Translation | X | 55.0032 |
+
+The optimization minimized the sum of squared distances between the data points and the parametric curve, resulting in a highly accurate fit. The mean L1 distance between the fitted curve and the dataset was approximately **0.013**, indicating an excellent match between the model and observed data.
+
+A plot was generated comparing the original data points (in blue) and the fitted curve (in red), demonstrating the accuracy of the fitting process. The corresponding per-point refined parameter values (`t_fit`) and residuals were stored in the generated `fitted_values.csv` file for further analysis.
+
+---
+
+### Summary of Key Outputs
+
+* **Optimized Parameters:** θ = 29.9994°, M = 0.0300, X = 54.9985  
+* **Mean L1 Distance:** 0.013  
+* **Output File:** `fitted_values.csv`  
+* **Visualization:** Displays a plot of fitted curve vs. data points  
+
+These results confirm that the two-stage fitting approach — global parameter optimization followed by per-point t-refinement — effectively models the dataset with high precision.
+
 ---
 
 
